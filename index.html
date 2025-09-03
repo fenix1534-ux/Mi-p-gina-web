@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cre@ciones Zurisadai L.C - Nuestros Servicios</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+            position: relative;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        
+        .tagline {
+            font-style: italic;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+        
+        .contact-info {
+            margin: 15px 0;
+            font-size: 16px;
+        }
+        
+        .whatsapp-button {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+        }
+        
+        .whatsapp-button:hover {
+            background: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
+        }
+        
+        .services {
+            padding: 30px 20px;
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            font-size: 32px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: #3498db;
+            border-radius: 2px;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            border-left: 5px solid #3498db;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-header {
+            padding: 20px;
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+        }
+        
+        .service-header h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .service-header h3 i {
+            margin-right: 10px;
+        }
+        
+        .service-header p {
+            opacity: 0.9;
+            font-size: 14px;
+        }
+        
+        .service-content {
+            padding: 20px;
+            flex-grow: 1;
+            overflow-y: auto;
+            max-height: 300px;
+            background: white;
+        }
+        
+        .service-content p {
+            color: #495057;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+        
+        .service-content ul {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .service-content li {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .highlight {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        
+        .checkmark {
+            color: #27ae60;
+            margin-right: 5px;
+        }
+        
+        .service-footer {
+            padding: 15px 20px;
+            background: #f1f2f6;
+            text-align: center;
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #2c3e50;
+            color: #ecf0f1;
+            font-size: 14px;
+        }
+        
+        .social-links {
+            margin-top: 15px;
+        }
+        
+        .social-links a {
+            color: #ecf0f1;
+            margin: 0 10px;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: #3498db;
+        }
+        
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 20px;
+            }
+            
+            header {
+                padding: 20px 15px;
+            }
+            
+            .logo {
+                font-size: 24px;
+            }
+            
+            .service-content {
+                padding: 15px;
+                max-height: 250px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h2 {
+                font-size: 26px;
+            }
+            
+            .service-content {
+                max-height: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Cre@ciones Zurisadai L.C</div>
+            <div class="tagline">Soluciones Tecnológicas Integrales</div>
+            <div class="contact-info">
+                <p>Ing. Luis Michelena</p>
+                <p>Teléfono: 0412-4336537</p>
+            </div>
+            <a href="https://wa.me/584124336537?text=Hola,%20me%20interesan%20sus%20servicios" class="whatsapp-button">
+                <i class="fab fa-whatsapp"></i> Contactar por WhatsApp
+            </a>
+        </header>
+        
+        <section class="services">
+            <h2>Nuestros Servicios</h2>
+            <div class="services-grid">
+                <!-- Servicio 1 -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3><i class="fas fa-chalkboard-teacher"></i> Próximos Cursos</h3>
+                        <p>Formación especializada en tecnología</p>
+                    </div>
+                    <div class="service-content">
+                        <p><span class="highlight">A mi distinguida clientela próximamente:</span></p>
+                        <p>• Cursos de Electricidad (Desde nivel básico hasta instalaciones avanzadas)</p>
+                        <p>• Domótica e Inmótica (Automatización de viviendas y edificios inteligentes)</p>
+                        <p>• Redes y Ciberseguridad (Aprende a diseñar redes y protegerlas de threats)</p>
+                        <p>• Electrónica (Reparación, diseño y Arduino)</p>
+                        <p>• Teoría, práctica e instalación Inteligencia Artificial y Machine Learning</p>
+                        <p>• Blockchain Basics (Coursera) Redes P2P y Descentralización</p>
+                        <p>• ¡Y muchos más!</p>
+                    </div>
+                    <div class="service-footer">
+                        <p>Próximo inicio: Estar atento a los estados de mi WhatsApp</p>
+                    </div>
+                </div>
+                
+                <!-- Servicio 2 -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3><i class="fas fa-laptop-code"></i> Servicio Técnico Computación</h3>
+                        <p>Soporte integral para tus dispositivos</p>
+                    </div>
+                    <div class="service-content">
+                        <p><span class="highlight">¡Servicio Técnico Especializado en computación & Soluciones Integrales!</span></p>
+                        <p>¿Problemas con tu equipo? Ofrezco servicios profesionales y avanzados para todo tipo de dispositivos: Laptop, PC, mini PC, Raspberry Pi, entre otros.</p>
+                        <p><span class="checkmark">✓</span> Reparación y mantenimiento.</p>
+                        <p><span class="checkmark">✓</span> Actualización de hardware (Discos SSD, RAM, más velocidad).</p>
+                        <p><span class="checkmark">✓</span> Instalación de sistemas operativos (Windows, Linux, Android, Custom ROM) y programas.</p>
+                        <p><span class="checkmark">✓</span> Instalación de juegos.</p>
+                        <p><span class="checkmark">✓</span> Recuperación de información, respaldos y todo lo relacionado.</p>
+                        <p>Escríbeme ya para cotizar. Precios justos y trabajo garantizado.</p>
+                    </div>
+                    <div class="service-footer">
+                        <p>Servicio rápido y garantizado</p>
+                    </div>
+                </div>
+                
+                <!-- Servicio 3 -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3><i class="fas fa-mobile-alt"></i> Servicio Técnico Celulares</h3>
+                        <p>Soluciones para dispositivos móviles</p>
+                    </div>
+                    <div class="service-content">
+                        <p><span class="highlight">¡Servicio Técnico Especializado!</span></p>
+                        <p>¿Tu celular está bloqueado, lento o presenta fallas de software? ¡Yo te ayudo! Ofrezco soluciones rápidas y confiables para que tu dispositivo funcione como nuevo.</p>
+                        <p><span class="highlight">SERVICIOS PARA CELULARES:</span></p>
+                        <p><span class="checkmark">✓</span> Liberación de sistema (Root).</p>
+                        <p><span class="checkmark">✓</span> Desbloqueo de patrón, PIN, cuenta Google (FRP).</p>
+                        <p><span class="checkmark">✓</span> Reparación de Software: Modo Download, Recovery, Flasheo.</p>
+                        <p><span class="checkmark">✓</span> Actualización y Cambio de software (ROMs personalizadas).</p>
+                        <p><span class="checkmark">✓</span> Mantenimiento general y optimización.</p>
+                    </div>
+                    <div class="service-footer">
+                        <p>Soluciones rápidas y confiables</p>
+                    </div>
+                </div>
+                
+                <!-- Servicio 4 -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3><i class="fas fa-gamepad"></i> Servicios para Consolas</h3>
+                        <p>Optimización para gaming</p>
+                    </div>
+                    <div class="service-content">
+                        <p><span class="highlight">¿Eres Gamer? ¡También tengo para ti!</span></p>
+                        <p><span class="highlight">SERVICIOS PARA CONSOLAS:</span></p>
+                        <p>- PlayStation 2, 3 y 4:</p>
+                        <p>• Instalación de juegos directo en Pendrive/Disco Duro, sistema operativo.</p>
+                        <p>• Instalación y configuración de software especializado (Webman, Multiman, Hen, entre otros) para correr los juegos.</p>
+                        <p>• Asesoría completa pregunta sin compromiso.</p>
+                    </div>
+                    <div class="service-footer">
+                        <p>Mejora tu experiencia de juego</p>
+                    </div>
+                </div>
+                
+                <!-- Servicio 5 -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3><i class="fas fa-tv"></i> Firestick & Gamestick</h3>
+                        <p>Potencia tus dispositivos multimedia</p>
+                    </div>
+                    <div class="service-content">
+                        <p><span class="highlight">SERVICIOS PARA FIRESTICK y GAMESTICK:</span></p>
+                        <p><span class="checkmark">✔</span> Instalación de software para liberar todo su potencial (Kodi, Stremio, IPTV, entre otros).</p>
+                        <p><span class="checkmark">✔</span> Configuración completa y personalizada.</p>
+                        <p><span class="checkmark">✔</span> Instalación de juegos, respaldo, desbloqueo y reinstalación del software.</p>
+                        <p><span class="checkmark">✔</span> Reparación de fallas.</p>
+                        <p>Trabajo con garantía, seriedad y rapidez.</p>
+                        <p>Escríbeme al privado para cotizaciones y consultas. ¡No pierdas tiempo, recupera tu dispositivo!</p>
+                    </div>
+                    <div class="service-footer">
+                        <p>Libera todo el potencial de tu dispositivo</p>
+                    </div>
+                </div>
+                
+                <!-- Servicio 6 -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3><i class="fas fa-store"></i> Ventas por Mercado Libre</h3>
+                        <p>Próximamente disponible</p>
+                    </div>
+                    <div class="service-content">
+                        <p><span class="highlight">Próximamente</span></p>
+                        <p>Reaperturando el Sistema de ventas por Mercado Libre.</p>
+                        <p>Se está terminando de diseñar el catálogo de productos.</p>
+                    </div>
+                    <div class="service-footer">
+                        <p>Volveremos muy pronto</p>
+                    </div>
+                </div>
+                
+                <!-- Servicio 7 -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3><i class="fas fa-building"></i> Proyectos Empresariales</h3>
+                        <p>Soluciones a medida para empresas</p>
+                    </div>
+                    <div class="service-content">
+                        <p>Me complace anunciar que me encuentro desarrollando proyectos de Automatización, Infraestructura de Redes, Sistemas, Seguridad, Electrónica para empresas y comercios.</p>
+                        <p>• Automatización</p>
+                        <p>• Proyectos de Redes y Sistemas</p>
+                        <p>• Electricidad y Electrónica</p>
+                        <p>• Sistemas de CCTV y Videovigilancia</p>
+                        <p>• Soporte Informático</p>
+                        <p>• Entre otros</p>
+                        <p>Trabajos realizados para empresas, comercios y clientes particulares. Desarrollamos un plan a tu medida.</p>
+                        <p>Solicita tu cotización sin compromiso. ➡ Contáctame por mensaje privado.</p>
+                    </div>
+                    <div class="service-footer">
+                        <p>Soluciones corporativas a medida</p>
+                    </div>
+                </div>
+                
+                <!-- Servicio 8 -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3><i class="fas fa-file-alt"></i> Trámites en Línea</h3>
+                        <p>Gestión rápida y segura</p>
+                    </div>
+                    <div class="service-content">
+                        <p>Realizo tus trámites en línea de forma rápida y segura.</p>
+                        <p>• Sistema Patria.</p>
+                        <p>• SAIME (Pasaporte, Prórroga, Cédula)</p>
+                        <p>• Apostillas y Legalizaciones.</p>
+                        <p>• Inscripción en el CNU/OPSU.</p>
+                        <p>• RIF y SENIAT.</p>
+                        <p>• Y muchos otros</p>
+                        <p>Escríbeme para preguntar y cotizar.</p>
+                    </div>
+                    <div class="service-footer">
+                        <p>Ahorra tiempo y evita colas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <p>© 2025 Cre@ciones Zurisadai L.C - Todos los derechos reservados</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
